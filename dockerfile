@@ -37,6 +37,7 @@ RUN \
 RUN \
 	wget --no-check-certificate ${DPG4x_SOURCE} && ls -lh && \
 	tar -xf ${DPG4X_TARNAME} && \
+	rm ${DPG4X_TARNAME} && \
 	cd ${DPG4X_PKGNAME} && \
 	find . -name \*.pyc -delete && \
 	mkdir /dpg4x && \
