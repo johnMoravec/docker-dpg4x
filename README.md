@@ -5,9 +5,13 @@ DPG4X can be found here: https://sourceforge.net/projects/dpg4x/
 
 # Environment file
 The docker-compose used here expects an .env file with values for:
+
 PUID - default user id
+
 PGID - same but for groups
+
 TZ - timezone
+
 ROOT - root directory to work from
 
 # logging in
