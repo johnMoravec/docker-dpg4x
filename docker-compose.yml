@@ -1,0 +1,17 @@
+version: '3.4'
+services:
+  dpg4x:
+    container_name: dpg4x
+    image: docker-dpg4x
+#    network_mode: host
+    environment:
+     - PUID=${PUID} # default user id from .env
+     - PGID=${PGID} # same but for groups
+     - TZ=${TZ} #timezone - defined in .env
+    volumes:
+     - ${ROOT}/TV:/media/TV
+     - ${ROOT}/Movies:/media/Movies
+     - ${ROOT}/video/:/media/output
+    ports:
+     - 5900:5900
+     - 5800:5800
