@@ -3,6 +3,8 @@ A Docker installation of DPG4X, allows you to have the specific version of Pytho
 
 DPG4X can be found here: https://github.com/lifehackerhansol/dpg4x
 
+The repository for this docker build is: https://github.com/johnMoravec/docker-dpg4x
+
 # Docker command
 The container can be started with the following command:
 
@@ -13,7 +15,7 @@ docker run --rm -p 5800:5800 -p 5900:5900 -v ${ROOT}/TV:/media/TV -v ${ROOT}/out
 Where ROOT is the directory you'd like mapped to the container
 
 # Docker-Compose
-You can use the included docker-compose file with the following .env setup.
+You can use the included docker-compose file from the linked github repository with the following .env setup.
 
 # Environment file
 The docker-compose used here expects an .env file with values for:
