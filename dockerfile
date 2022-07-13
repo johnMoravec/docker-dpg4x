@@ -15,9 +15,9 @@ ARG DOCKER_IMAGE_VERSION=unknown
 ARG DPG4X_VERSION="3.0"
 
 #define software download URLs
-ARG DPG4X_PKGNAME=dpg4x-${DPG4X_VERSION}
-ARG DPG4X_TARNAME=${DPG4X_PKGNAME}.tar.bz2
-ARG DPG4x_SOURCE="https://sourceforge.net/projects/dpg4x/files/dpg4x_${DPG4X_VERSION}/${DPG4X_TARNAME}"
+ARG DPG4X_PKGNAME=dpg4x_${DPG4X_VERSION}
+ARG DPG4X_TARNAME=${DPG4X_PKGNAME}.tar.gz
+ARG DPG4x_SOURCE="https://github.com/lifehackerhansol/dpg4x/archive/refs/tags/${DPG4X_TARNAME}"
 
 # define working directory
 WORKDIR /tmp
@@ -37,10 +37,9 @@ RUN \
 RUN \
 	wget --no-check-certificate ${DPG4x_SOURCE} && ls -lh && \
 	tar -xf ${DPG4X_TARNAME} && \
-	cd ${DPG4X_PKGNAME} && \
-	find . -name \*.pyc -delete && \
+	rm ${DPG4X_TARNAME} && \
 	mkdir /dpg4x && \
-	mv ./* /dpg4x/
+	mv dpg4x-${DPG4X_PKGNAME}/* /dpg4x/
 
 COPY startapp.sh /startapp.sh
 
