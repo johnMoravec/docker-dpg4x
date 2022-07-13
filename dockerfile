@@ -38,9 +38,8 @@ RUN \
 	wget --no-check-certificate ${DPG4x_SOURCE} && ls -lh && \
 	tar -xf ${DPG4X_TARNAME} && \
 	rm ${DPG4X_TARNAME} && \
-	cd dpg4x-${DPG4X_PKGNAME} && \
 	mkdir /dpg4x && \
-	mv ./* /dpg4x/
+	mv dpg4x-${DPG4X_PKGNAME}/* /dpg4x/
 
 COPY startapp.sh /startapp.sh
 
