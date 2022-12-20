@@ -35,6 +35,7 @@ RUN \
 
 # get dpg4x and dependencies
 RUN \
+        cd ${WORKDIR} && \
 	wget --no-check-certificate ${DPG4x_SOURCE} && ls -lh && \
 	tar -xf ${DPG4X_TARNAME} && \
 	rm ${DPG4X_TARNAME} && \
@@ -51,3 +52,7 @@ RUN \
     # Make sure the main window is always in the background.
     sed-patch '/<application type="normal" title="dpg4x">/a \    <layer>below</layer>' \
         /etc/xdg/openbox/rc.xml
+
+# remove unnecessary packages
+RUN \ 
+    apt remove -y wget curl
