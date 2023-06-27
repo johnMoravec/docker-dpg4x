@@ -35,4 +35,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:$GITHUB_RUN_ID
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:${{ env.GITHUB_RUN_ID }}
