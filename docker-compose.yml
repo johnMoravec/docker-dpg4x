@@ -13,5 +13,5 @@ services:
      - ${ROOT}/Movies:/media/Movies
      - ${ROOT}/video/:/media/output
     ports:
-     - 5901:5900
+     - 5900:5900
      - 5800:5800
