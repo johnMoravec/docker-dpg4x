@@ -12,6 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      buildNumber:
+        description: 'version number to try publishing'
+        required: true
+        type: string
 
 jobs:
   build-and-push:
@@ -35,4 +40,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:${{ env.GITHUB_RUN_ID }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:${{ env.GITHUB_RUN_ID }}${{ env.buildNumber }}
