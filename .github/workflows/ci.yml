@@ -43,4 +43,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:${{ env.GITHUB_RUN_ID }}${{ on.workflow_dispatch.inputs.buildNumber }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:latest,${{ secrets.DOCKER_HUB_USERNAME }}/docker-dpg4x:${{ env.GITHUB_RUN_ID }}${{ inputs.buildNumber }}
