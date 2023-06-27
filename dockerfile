@@ -29,9 +29,7 @@ RUN \
 	apt install -y python3.9 && \
 	apt install -y python3-pip && \
 	apt install -y dbus-x11 mencoder mplayer python-wxtools python3-wxgtk4.0 \
-		python3-pil libmariadb-dev-compat libmariadb-dev && \
-	pip3 install --upgrade pip && \
-	pip install mysqlclient
+		python3-pil libmariadb-dev-compat libmariadb-dev
 
 # get dpg4x and dependencies
 RUN \

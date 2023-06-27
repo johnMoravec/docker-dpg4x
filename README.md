@@ -7,7 +7,7 @@ DPG4X can be found here: https://github.com/lifehackerhansol/dpg4x
 The container can be started with the following command:
 
 '''
-docker run --rm -p 5800:5800 -p 5900:5900 -v ${ROOT}/TV:/media/TV -v ${ROOT}/output/:/media/output docker-dpg4x
+docker run --rm -p 5800:5800 -p 5900:5900 -v ${ROOT}/TV:/media/TV -v ${ROOT}/output/:/media/output johnmoravec/docker-dpg4x
 '''
 
 Where ROOT is the directory you'd like mapped to the container
