@@ -3,6 +3,8 @@ A Docker installation of DPG4X, allows you to have the specific version of Pytho
 
 DPG4X can be found here: https://github.com/lifehackerhansol/dpg4x
 
+Docker GUI image based from: https://github.com/jlesage/docker-baseimage-gui
+
 # Docker command
 The container can be started with the following command:
 
